@@ -1,0 +1,89 @@
+<! doctype html >
+<html><head>
+<title>Reversing function</title>
+  <meta name="description" content="This is a function to reverse any word">
+  <meta name="author" content="Gehad Gad">
+
+  <style media="screen">
+
+  </style>
+
+
+</head>
+
+<body>
+
+<h1> Create a function to reverse any word that you type in </h1>
+   <form id="words" class="" action="index.html" method="post">
+
+    <input id="Word" type="text" name="word" placeholder="Please enter a word to be reversed" width="100px">
+
+  </form>
+
+  <button type="submit" name="Reverse" onclick="reverses()"> Reverse</button>
+
+  <p id="output"></p>
+
+<br><br>
+
+
+<h1> Create a function that takes an input number, and prints a table with the first 20 multiples of
+the number, in order 5x4 </h1>
+
+  <form id="words" class="" action="index.html" method="post">
+
+    <input id="number" type="text" name="number" placeholder="Please enter a number" width="100px">
+
+  </form>
+
+  <button type="submit" name="calculate" onclick="calculate()"> calculate</button>
+
+  <p id="output2"></p>
+
+
+
+
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+
+  function reverses(){
+
+      document.getElementById("output").innerHTML = document.getElementById('Word').value.split("").reverse().join("")
+
+  }
+
+
+function calculate(){
+
+       var w = document.getElementById('number').value
+       var n = parseInt(w)
+       var list = []
+       var counter = 4
+       for (let i = 0; i < 20 ; i++){
+          var n_new = n+i
+
+          var res1 = i/counter
+          if (res1 == Math.round(res1)){
+            if (i != 0){
+            list.push("<p>");
+
+
+          }
+
+          }
+          list.push(n_new)
+
+          var list2 = list.join(" ")
+
+       }
+       document.getElementById("output2").innerHTML = list2
+  }
+</script>
+
+<!-- End of StatCounter Code -->
+
+
+
+
+</body></html>
